@@ -1,0 +1,27 @@
+{
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "connect-mongodb-session": "^3.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.11",
+    "react-token-auth": "^2.3.8"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
