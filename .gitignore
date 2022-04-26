@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+functions
 # dependencies
 /node_modules
 /.pnp
@@ -13,6 +14,7 @@
 /.idea
 
 # misc
+#.netlifi
 .DS_Store
 .env
 .env.local
