@@ -4,6 +4,7 @@
   "scripts": {
     "build": "./node_modules/.bin/netlify-lambda build src",
     "client": "cd client && yarn start",
+    "deploy": "npm start server.js",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
