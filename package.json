@@ -2,11 +2,11 @@
   "name": "example-create-react-app-express",
   "version": "1.0.0",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "start": "node index",
     "build": "./node_modules/.bin/netlify-lambda build src",
     "client": "cd client && yarn start",
-    "deploy": "npm start server.js",
-    "server": "nodemon server.js",
+    "deploy": "npm start index.js",
+    "server": "nodemon index.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
