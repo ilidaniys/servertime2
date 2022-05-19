@@ -2,6 +2,7 @@
   "name": "example-create-react-app-express",
   "version": "1.0.0",
   "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "./node_modules/.bin/netlify-lambda build src",
     "client": "cd client && yarn start",
     "deploy": "npm start server.js",
@@ -22,7 +23,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.11",
     "netlify-lambda": "^2.0.15",
-    "react-token-auth": "^2.3.8"
+    "react-token-auth": "^2.3.8",
+    "serverless": "^3.17.0",
+    "serverless-http": "^3.0.1"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"
