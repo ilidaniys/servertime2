@@ -8,8 +8,7 @@ const bodyParser = require('body-parser');
 const addAuth = require('./route/auth')
 const User = require('./model/user')
 const authMiddleware = require('./middleware/authentificateToken')
-const serverless = require("serverless-http");
-const router = express.Router()
+
 
 const port = process.env.PORT || 5000;
 const URI = process.env.URL
@@ -107,18 +106,15 @@ app.post('/api/endTime', authMiddleware, async (req, res) => {
 
 
 
-// async function start() {
-//     try {
-//         await mongoose.connect(URI)
-//         app.listen(port, () => console.log(`Listening on port ${port}`));
-//     } catch (e) {
-//         console.log(e)
-//     }
-// }
-//
-// start()
+async function start() {
+    try {
+        await mongoose.connect(URI)
+        app.listen(port, () => console.log(`Listening on port ${port}`));
+    } catch (e) {
+        console.log(e)
+    }
+}
 
-app.use(`/.netlify/functions/api`, router)
-module.exports = app
-module.exports.handler = serverless(app)
+start()
+
 
